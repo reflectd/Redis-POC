@@ -1,11 +1,3 @@
-<style>
-    img {
-        border-radius: 10px;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-        height: 500px;
-    }
-</style>
-
 # Redis POC
 This is a proof-of-concept projet to showcase some Redis use cases.
 
@@ -34,13 +26,13 @@ The frontend will be available at `http://localhost:3000`.
 ### Caching
 To test if the caching works, enter some text into the data field in the form and click "Generate Hash".  
 <div align=center>
-    <img src="./images/CacheMiss.png">  
+    <img src="./images/CacheMiss.png" border-radius: 10px;>  
 </div>  
 
 As you can see, the response is very slow, taking over 5 seconds to get a response.  
 Now, click "Generate Hash" a second time.  
 <div align=center>
-    <img src="./images/CacheHit.png">  
+    <img src="./images/CacheHit.png" border-radius: 10px;>  
 </div>  
 The response time is significantly faster (now just a few milliseconds) and it indicates that it found the query in cache.
 
@@ -48,5 +40,5 @@ The response time is significantly faster (now just a few milliseconds) and it i
 ### Rate Limiting
 To verify that the rate limit works, click the "Generate Hash" button more than 5 times with the same API key in under a minute. The server will then instanly respond with a 429 status code and save compute ressources.  
 <div align=center>
-    <img src="./images/RateLimited.png">  
+    <img src="./images/RateLimited.png" border-radius: 10px;>  
 </div>   
